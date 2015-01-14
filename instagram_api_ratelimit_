@@ -10,7 +10,7 @@
 # env.remaining_warning 1000
 # env.remaining_critical 500
 
-. $MUNIN_LIB_DIR/plugins/plugin.sh
+. $MUNIN_LIBDIR/plugins/plugin.sh
 
 [ -n "$client_id" ] && [ -n "$client_secret" ] || {
   echo "Need client_id and client_secret."
