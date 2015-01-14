@@ -7,8 +7,8 @@
 # [instagram_api_ratelimit_account1]
 # env.client_id acc0unt1
 # env.client_secret acc0unt1secr3t
-# env.remaining_warning 1000
-# env.remaining_critical 500
+# env.remaining_warning 1000:
+# env.remaining_critical 500:
 
 . $MUNIN_LIBDIR/plugins/plugin.sh
 
