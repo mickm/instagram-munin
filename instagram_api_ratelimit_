@@ -33,6 +33,7 @@ parse() {
 read limit remaining <<<$(fetch | parse)
 
 if [ "$1" = "config" ]; then
+  [ -n "$host_name" ] && echo "host_name $host_name"
   echo "graph_title $account_name - Instagram API ratelimit"
   echo "graph_order used remaining"
   echo "graph_args --base 1000 -r --lower-limit 0 --upper-limit $limit"
