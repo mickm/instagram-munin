@@ -25,8 +25,9 @@ fetch() {
 }
 
 parse() {
-  awk '/^< X-Ratelimit-Limit: [0-9]+\s*$/ {limit=$3};         \
-       /^< X-Ratelimit-Remaining: [0-9]+\s*$/ {remaining=$3}; \
+  awk '/^< X-Ratelimit-Limit: [0-9]+\s*$/ {limit=$3};               \
+       /^< X-Ratelimit-Remaining: [0-9]+\s*$/ {remaining=$3};       \
+       /^{"code": 429/ {limit=$35; used=$22; remaining=limit-used}; \
        END {printf "%d %d\n", limit, remaining}'
 }
 
