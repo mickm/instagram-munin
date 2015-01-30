@@ -10,6 +10,7 @@
 # env.remaining_warning 1000:
 # env.remaining_critical 500:
 # env.min_graph_height 5000
+# env.https_proxy https://proxy.example.com:8888/
 
 . $MUNIN_LIBDIR/plugins/plugin.sh
 
